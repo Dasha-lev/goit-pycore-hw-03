@@ -1,7 +1,7 @@
 import random
 
 #Create get_numbers_ticket(min, max, quantity) to generate random for lotteries
-def get_numbers_ticket(min: int, max: int, quantity: int) -> list :
+def get_numbers_ticket(min: int, max: int, quantity: int):
     #Chek function params
     if min < 1 or max > 1000 or quantity > (max - min+1):
         return []

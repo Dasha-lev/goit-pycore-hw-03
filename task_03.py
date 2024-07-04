@@ -2,15 +2,12 @@ import re
 
 #Create function  normalize_phone(phone_number)
 def  normalize_phone(phone_number): 
-     """
-     Create a row in order to store the normalize number
-     """ 
+     #Create a row in order to store the normalized number
      normalized_number = re.sub('[^0-9,+]', '', phone_number)
-    
      #If number doesn't start with '+' we should add '+38' at the beginning of the number
      if normalized_number.startswith('380'):
         normalized_number = '+' + normalized_number
-
+     #If number starts with '0' we should add '+38' at the beginning of the number
      elif normalized_number.startswith('0'):
         normalized_number = '+38' + normalized_number    
      #Return normalized number
